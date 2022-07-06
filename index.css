@@ -4,6 +4,7 @@
     --header-background: #6943ff;
     --main-background: #f4f4f4;
     --input-border: #b295ff;
+    --btn-color: #3d3d3d;
 
     --main-width: min(100vw, calc(100vh * 550 / 729));
 }
@@ -94,6 +95,11 @@ input[type="number"] {
     box-shadow: 0px calc(var(--main-width) * 1 / 550)
         calc(var(--main-width) * 2 / 550) rgba(0, 0, 0, 0.05);
     border-radius: calc(var(--main-width) * 5 / 550);
+
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: calc(var(--main-width) * 16 / 550);
+    color: var(--btn-color);
 }
 
 #converter:hover {
