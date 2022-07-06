@@ -1,8 +1,44 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Unit Conversion</title>
+
+        <!-- CSS Remedy: https://github.com/jensimmons/cssremedy -->
+        <link rel="stylesheet" href="remedy.css" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="index.css" />
+        <script src="index.js" defer></script>
     </head>
     <body>
-        <script src="index.js"></script>
+        <header>
+            <h1>Metric/Imperial Unit Conversion</h1>
+            <input type="text" id="scalar" value="20" />
+            <button type="button" id="converter">Convert</button>
+        </header>
+        <main>
+            <section class="unit" id="length">
+                <h2>Length (Meter/Feet)</h2>
+                <p>20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
+            </section>
+            <section class="unit" id="volume">
+                <h2>Volume (Liters/Gallons)</h2>
+                <p>20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
+            </section>
+            <section class="unit" id="mass">
+                <h2>Mass (Kilograms/Pounds)</h2>
+                <p>20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+            </section>
+        </main>
     </body>
 </html>

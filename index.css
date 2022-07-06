@@ -1,3 +1,142 @@
+/* Variables */
+:root {
+    --body-background: #1c1c1c;
+    --header-background: #6943ff;
+    --main-background: #f4f4f4;
+    --input-border: #b295ff;
+
+    --main-width: min(100vw, calc(100vh * 550 / 729));
+}
+
+/* Light Mode */
+:root {
+    --main-background: #f4f4f4;
+    --section-background: white;
+    --h2-color: #5a537b;
+    --p-color: #353535;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-background: #1f2937;
+        --section-background: #273549;
+        --h2-color: #ccc1ff;
+        --p-color: white;
+    }
+}
+
 body {
+    background-color: var(--body-background);
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+
+header {
+    width: var(--main-width);
+    height: calc(var(--main-width) * 285 / 550);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--header-background);
+    color: white;
+}
+
+header h1 {
+    font-size: calc(var(--main-width) * 28 / 550);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+
+    margin-top: 0;
+    margin-bottom: calc(var(--main-width) * 30 / 550);
+}
+
+/* Remove ugly arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#scalar {
+    background-color: var(--header-background);
+    width: calc(var(--main-width) * 117 / 550);
+    border: calc(var(--main-width) * 2 / 550) solid #b295ff;
+    border-radius: calc(var(--main-width) * 5 / 550);
+
+    color: white;
+    line-height: calc(var(--main-width) * 83 / 550);
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: calc(var(--main-width) * 58 / 550);
+
+    margin-bottom: calc(var(--main-width) * 25 / 550);
+}
+
+#converter {
+    background-color: white;
+    width: calc(var(--main-width) * 117 / 550);
+    height: calc(var(--main-width) * 42 / 550);
+    border: none;
+    box-shadow: 0px calc(var(--main-width) * 1 / 550)
+        calc(var(--main-width) * 2 / 550) rgba(0, 0, 0, 0.05);
+    border-radius: calc(var(--main-width) * 5 / 550);
+}
+
+#converter:hover {
+    background-color: #f1f1f5;
+}
+
+#converter:active {
+    background-color: #d0d0d5;
+}
+
+main {
+    width: var(--main-width);
+    height: calc(var(--main-width) * 444 / 550);
+    background-color: var(--main-background);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main section {
+    background-color: var(--section-background);
+    margin: calc(var(--main-width) * 12 / 550)
+        calc(var(--main-width) * 25 / 550);
+    height: calc(var(--main-width) * 109 / 550);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+main section h2 {
+    color: var(--h2-color);
+    font-weight: 600;
+    font-size: calc(var(--main-width) * 20 / 550);
+    line-height: calc(var(--main-width) * 20 / 550);
+    margin-top: calc(var(--main-width) * 31 / 550);
+    margin-bottom: calc(var(--main-width) * 12 / 550);
+}
+
+main section p {
+    color: var(--p-color);
+    font-size: calc(var(--main-width) * 14 / 550);
+    line-height: calc(var(--main-width) * 20 / 550);
     margin: 0;
 }
